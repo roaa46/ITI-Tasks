@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alert Message</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding: 40px;
+    }
+
+    button {
+      padding: 10px 20px;
+      color: white;
+      font-weight: bold;
+      border: none;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .success-btn {
+      background-color: green;
+    }
+
+    .error-btn {
+      background-color: red;
+    }
+
+    .alert-box {
+      display: none;
+      margin-top: 30px;
+      background-color: #eee;
+      border: 1px solid #ccc;
+      padding: 30px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    .alert-box h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .alert-box img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .alert-box p {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="successBtn" class="success-btn">Success Alert</button>
+  <button id="errorBtn" class="error-btn">Error Alert</button>
+
+  <div id="alertBox" class="alert-box">
+    <h2 id="alertTitle"></h2>
+    <img id="alertImage" src="" alt="Alert Icon">
+    <p id="alertMessage"></p>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

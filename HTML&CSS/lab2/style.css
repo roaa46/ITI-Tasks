@@ -1,0 +1,237 @@
+/* ==== Global Style ==== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    font-family: "Montserrat", "Open Sans", "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(83, 84, 121);
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    line-height: 2;
+    font-size: 16px;
+    color: rgb(82, 89, 121);
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 90px;
+    margin: 15px 0px 10px;
+    letter-spacing: -2px;
+}
+
+h2 {
+    font-size: 68px;
+    letter-spacing: -1px;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+li {
+    display: inline-block;
+}
+.h{
+    color: #111a45;
+}
+.btn{
+  padding: 17px 30px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.btn-outline{
+    color: #251fb6;
+    font-weight: 600;
+  border: 2px solid rgba(37, 31, 182, .13);
+}
+
+.btn-bg{
+  background-color: #251fb6;
+  color: #fff;
+}
+.btn-arrow{
+    padding: 24px 30px 22px;
+}
+.frame{
+    width: 600px;
+    border: #f1f1f5;
+    border-width:20mm;
+    border-style:solid;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+}
+.side-line{
+    font-size: 24px;
+    font-weight: 500;
+}
+.clearfix{
+    clear: both;
+}
+
+/* ==== Navbar Style ==== */
+.nav{
+    width: 1350px;
+    margin: 50px auto;
+
+}
+
+.nav-logo {
+  float: left;
+  margin: 25px;
+}
+
+.nav-list {
+  float: right;
+}
+
+.nav-item {
+  display: inline-block;
+}
+/* ==== Hero section Style ==== */
+
+.hero{
+    text-align: center;
+    margin: 120px;
+}
+.arrow{
+    color: #fff;
+}
+.title-span{
+    background-color: #dbddff;
+}
+
+/* ==== How work Style ==== */
+.How-work{
+    text-align: center;
+    margin: 200px;
+}
+
+/* ==== Pick a template Style ==== */
+.template {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 200px auto;
+}
+
+.Template-content {
+    text-align: left;
+}
+
+.template-img {
+    width: 645px;
+    height: auto;
+    /* remove float */
+}
+/* ==== Find opportunities Style ==== */
+.opportunities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 200px auto;
+}
+
+.opportunities-content {
+    text-align: left;
+}
+
+.opportunities-img {
+    width: 645px;
+    height: auto;
+    /* remove float */
+}
+/* ==== Get verified Style ==== */
+
+.verify {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 200px auto;
+}
+
+.verify-content {
+    text-align: left;
+}
+
+.verify-img {
+    width: 645px;
+    height: auto;
+    /* remove float */
+}
+/* ==== Personalize Style ==== */
+.personalize {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 200px auto;
+}
+
+.personalize-content {
+    text-align: left;
+}
+
+.personalize-img {
+    width: 645px;
+    height: auto;
+    /* remove float */
+}
+/* ==== Quote Style ==== */
+.quote{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 150px auto;
+    background-color: #f1f1f5;
+    border-radius: 15px;
+}
+.quote-content{
+    text-align: right;
+}
+.quote-logo{
+    width: 30px;
+}
+.quote-img{
+    width: 350px;
+    height: auto;
+    border-radius: 25px;
+}
+/* ==== Footer Style ==== */
+.footer{
+    background-color: #111a45;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+.footer-logo{
+    margin-left: 50px;
+}
+.footer-list{
+    margin-right: 50px;
+}
+.footer-list i {
+  font-size: 24px;    
+  color: #969696;            
+  margin: 0 10px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Count Elements</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        input {
+            background-color: #142a47;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px;
+            border: none;
+            width: 200px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+        .field {
+            display: inline-block;
+            margin: 20px;
+        }
+
+        button {
+            background-color: #142a47;
+            color: white;
+            padding: 10px 20px;
+            margin: 20px;
+            border-radius: 15px;
+            border: 2px solid green;
+            cursor: pointer;
+        }
+
+        #result {
+            border: 3px solid #142a47;
+            border-radius: 15px;
+            padding: 20px;
+            width: fit-content;
+            margin: auto;
+            color: red;
+            font-family: monospace;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="field">
+        <label>TagName</label>
+        <input name="tag" type="text" id="tagNameInput">
+    </div>
+
+    <div class="field">
+        <label>className</label>
+        <input type="text" id="classNameInput">
+    </div>
+
+    <div class="field">
+        <label>id</label>
+        <input name="id" type="text" id="idInput">
+    </div>
+
+    <div class="field">
+        <label>Name</label>
+        <input type="text" id="nameInput">
+    </div>
+
+    <br>
+    <button onclick="countElements()">Count</button>
+
+    <div id="result"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Users Data Fetcher</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <h2>Users Data Fetcher</h2>
+    <div id="allUsersDiv">
+      <div id="buttonDiv">
+        <button id="fetchBtn">Fetch Users</button>
+        <input type="number" id="searchId" placeholder="User ID" />
+        <button id="searchBtn">Search</button>
+      </div>
+      <div id="tableDiv">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Username</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>Website</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

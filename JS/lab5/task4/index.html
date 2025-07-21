@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+</head>
+<body>
+  <form id="registerForm">
+    <label>Enter your name: <input type="text" id="name" required></label><br><br>
+    <label>Enter your age: <input type="number" id="age" required></label><br><br>
+
+    <label>Select your Gender:</label><br>
+    <label>
+      <input type="radio" name="gender" value="male" required>
+      <img src="images/male.png" width="100">
+    </label>
+    <label>
+      <input type="radio" name="gender" value="female">
+      <img src="images/female.png" width="100">
+    </label><br><br>
+
+    <label>Select your favorite color:
+      <select id="color">
+        <option>Red</option>
+        <option>Blue</option>
+        <option>Green</option>
+      </select>
+    </label><br><br>
+
+    <button type="submit">register</button>
+  </form>
+
+  <script src="main.js"></script>
+</body>
+</html>

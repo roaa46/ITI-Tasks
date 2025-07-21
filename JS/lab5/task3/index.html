@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Slide Show Game</title>
+  <style>
+    body { text-align: center; font-family: Arial; }
+    #controls button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    #prev, #next { background-color: orange; color: black; }
+    #play { background-color: green; }
+    #stop { background-color: red; }
+    img { width: 400px; height: 300px; }
+  </style>
+</head>
+<body>
+
+  <h1><span style="color: rgb(86, 158, 187);">Slide Show</span> Game</h1>
+
+  <div id="sliderContainer">
+    <img id="slideImage" src="images/img1.jpg" alt="Slide">
+  </div>
+
+  <div id="controls">
+    <button id="prev">&lt;</button>
+    <button id="play">play</button>
+    <button id="stop">stop</button>
+    <button id="next">&gt;</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

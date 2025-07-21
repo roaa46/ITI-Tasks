@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #2d4f4f;
+            text-align: center;
+            padding-top: 50px;
+            font-family: Arial, sans-serif;
+        }
+
+        #inputBox {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-style: italic;
+            font-size: 16px;
+        }
+
+        .circle {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            margin: 20px;
+            border-radius: 50%;
+            background-color: gray;
+            border: 3px solid black;
+        }
+
+        #message {
+            color: white;
+            margin-top: 10px;
+        }
+
+        #hiddenSpan {
+            visibility: hidden;
+            white-space: pre;
+            font-style: italic;
+            font-size: 16px;
+            padding: 10px;
+            position: absolute;
+        }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="inputBox" placeholder="Enter a number between 1 and 3">
+    <div id="message"></div>
+
+    <div>
+        <div id="circle1" class="circle"></div>
+        <div id="circle2" class="circle"></div>
+        <div id="circle3" class="circle"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
