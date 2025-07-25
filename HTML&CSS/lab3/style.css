@@ -1,0 +1,54 @@
+ body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            background: #f0f0f0;
+        }
+        .form-container {
+            width: 300px;
+            border: 2px solid #000;
+            padding: 15px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input[type="text"], input[type="password"], select, textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        select {
+            height: 24px;
+        }
+        .gender-group, .favorites-group {
+            margin-bottom: 10px;
+        }
+        .gender-group input, .favorites-group input {
+            margin-right: 5px;
+        }
+        .favorites-group label {
+            display: inline;
+            margin-right: 10px;
+        }
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+        button {
+            padding: 5px 10px;
+            margin-right: 10px;
+            background: #ccc;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+        .file-input {
+            margin-top: 10px;
+        }
