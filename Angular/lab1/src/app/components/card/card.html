@@ -1,0 +1,16 @@
+@if (active) {
+<div class="card">
+  <!-- Property Binding -->
+  <img class="img" [src]="imgUrl" alt="" />
+
+  <div class="card-body">
+    <!-- Interpolation -->
+    <h3 class="username">{{userName | uppercase}}</h3>
+
+    <p class="job">{{job}}</p>
+    <p class="description">{{description}}</p>
+    <!-- Event Binding -->
+    <button class="btn" (click)="remove()">Remove</button>
+  </div>
+</div>
+}
