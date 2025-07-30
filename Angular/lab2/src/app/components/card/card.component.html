@@ -1,0 +1,14 @@
+<div class="card" [ngStyle]="{ border: isLast ? '2px solid red' : '1px solid #ccc' }">
+
+  <img class="img" [src]="user.imgUrl" alt="{{ user.name }}" />
+
+  <div class="card-body">
+    <!-- interpolation binding -->
+    <h3>{{ user.name }}</h3>
+    <p class="job">{{ user.job }}</p>
+    <p class="bio">{{ user.bio }}</p>
+    <!-- event binding -->
+    <button class="btn" (click)="onRemoveClicked()">Remove</button>
+  </div>
+  
+</div>

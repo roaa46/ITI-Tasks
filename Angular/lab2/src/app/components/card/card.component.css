@@ -1,0 +1,48 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  justify-self: center;
+  margin: 30px;
+  text-align: center;
+  padding: 10px;
+}
+
+.img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #aaa;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+.card-body {
+  margin: auto;
+  align-items: center;
+}
+
+.job {
+  font-size: medium;
+  color: #434242;
+}
+
+.bio {
+  color: #555;
+  font-size: small;
+}
+
+.btn {
+    padding: 6px 12px;
+  margin: 4px 4px;
+  border-radius: 4px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  background-color: #ff2929;
+  color: #fffefe;
+  transition: background 0.3s ease;
+}
