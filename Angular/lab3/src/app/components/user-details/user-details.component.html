@@ -1,0 +1,31 @@
+<div class="user-details-container" *ngIf="user">
+  <div class="header">
+    <button class="back-btn" (click)="goBack()">Back to Users</button>
+    <h1>User Details</h1>
+  </div>
+  
+  <div class="user-details-card">
+    <div class="user-image">
+      <img [src]="user.imgUrl" [alt]="user.name" />
+    </div>
+    
+    <div class="user-info">
+      <h2>{{ user.name }}</h2>
+      <p class="job-title">{{ user.job }}</p>
+      <div class="bio-section">
+        <h3>About</h3>
+        <p class="bio">{{ user.bio }}</p>
+      </div>
+      <div class="user-id">
+        <strong>User ID:</strong> {{ user.id }}
+      </div>
+    </div>
+  </div>
+</div>
+
+@if (!user) {
+  <div class="error-message">
+    <h2>User not found</h2>
+    <button class="back-btn" (click)="goBack()">Back to Users</button>
+  </div>
+}

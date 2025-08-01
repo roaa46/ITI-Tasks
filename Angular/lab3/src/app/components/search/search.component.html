@@ -1,0 +1,5 @@
+ <!-- two way data binding -->
+<input type="text"
+       [(ngModel)]="searchKeyword"
+       (input)="onSearchHappen()"
+       placeholder="Search by name" />

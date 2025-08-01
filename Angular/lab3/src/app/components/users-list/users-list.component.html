@@ -1,0 +1,14 @@
+<div class="search">
+  <app-search (searchHappen)="onSearchHappened($event)"></app-search>
+</div>
+<div class="users-list">
+  @for (user of filteredUsers; track $index) {
+    <!-- property & event binding  -->
+  <app-card
+    [user]="user"
+    [isLast]="$index === filteredUsers.length - 1"
+    (removeCard)="onRemoveUser($event)"
+  >
+  </app-card>
+  }
+</div>

@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <ul class="navbar-nav">
+      @for (item of routes; track $index) {
+        <li class="nav-item">
+          <a [routerLink]="item.path" 
+             routerLinkActive="link-active" 
+             [routerLinkActiveOptions]="item.path === '/' ? {exact: true} : {exact: false}"
+             class="nav-link">
+            {{ item.title }}
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+</nav>

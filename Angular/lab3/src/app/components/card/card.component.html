@@ -1,0 +1,19 @@
+<!-- attribute binding -->
+<div class="card" [style.border]="isLast ? '3px solid rgb(168, 122, 122)' : '1px solid #ccc'">
+  <!-- [ngStyle]="{ border: isLast ? '2px solid red' : '1px solid #ccc' }" -->
+
+  <img class="img" [src]="user.imgUrl" alt="{{ user.name }}" />
+
+  <div class="card-body">
+    <!-- interpolation binding -->
+    <h3>{{ user.name }}</h3>
+    <p class="job">{{ user.job }}</p>
+    <p class="bio">{{ user.bio }}</p>
+    <!-- event binding -->
+    <div class="card-actions">
+      <button class="btn details-btn" (click)="onDetailsClicked()">Details</button>
+      <button class="btn remove-btn" (click)="onRemoveClicked()">Remove</button>
+    </div>
+  </div>
+  
+</div>
