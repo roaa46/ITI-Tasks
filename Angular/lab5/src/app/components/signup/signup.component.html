@@ -1,0 +1,32 @@
+<form [formGroup]="signupForm" (ngSubmit)="submit()">
+  <h3>Signup</h3>
+
+  <label>Email</label>
+  <input type="email" formControlName="email" />
+  <br>
+
+  <label>Username</label>
+  <input type="text" formControlName="username" />
+  <br>
+
+  <label>Password</label>
+  <input type="password" formControlName="password" />
+  <br>
+
+  <button type="submit">Submit</button>
+
+  <div class="error">
+    @if(signupForm.invalid && signupForm.dirty) {
+      <p>Invalid Form</p>
+    }
+    @if(getEmail?.invalid && getEmail?.dirty) {
+      <p>Invalid Email</p>
+    }
+    @if(getUsername?.invalid && getUsername?.dirty) {
+      <p>Username must be more than 5 characters</p>
+    }
+    @if(getPassword?.invalid && getPassword?.dirty) {
+      <p>Password must be more than 10 characters</p>
+    }
+  </div>
+</form>
