@@ -1,0 +1,17 @@
+<!-- attribute binding -->
+<div class="card" [style.border]="isLast ? '3px solid rgb(168, 122, 122)' : '1px solid #ccc'">
+  <!-- Default user image since API doesn't provide images -->
+  <img class="img" src="/user.webp" alt="{{ user.name }}" />
+
+  <div class="card-body">
+    <!-- interpolation binding -->
+    <h3>{{ user.name }}</h3>
+    <p class="email">{{ user.email }}</p>
+    <p class="website">{{ user.website }}</p>
+    <!-- event binding -->
+    <div class="card-actions">
+      <button class="btn details-btn" (click)="onDetailsClicked()">Details</button>
+      <button class="btn remove-btn" (click)="onRemoveClicked()">Remove</button>
+    </div>
+  </div>
+</div>

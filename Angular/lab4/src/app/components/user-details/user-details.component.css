@@ -1,0 +1,98 @@
+.user-details-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  color: #333;
+  margin: 10px 0;
+}
+
+.back-btn {
+  background-color: rgb(188, 141, 141);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.back-btn:hover {
+  background-color: rgb(221, 189, 189);
+}
+
+.user-details-card {
+  display: flex;
+  gap: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  align-items: flex-start;
+}
+
+.user-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f0f0f0;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-info h2 {
+  color: #333;
+  margin: 0 0 10px 0;
+  font-size: 2em;
+}
+
+.contact-info {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.contact-info h3 {
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.email, .website {
+  color: #555;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.email strong, .website strong {
+  color: #333;
+}
+
+.user-id {
+  color: #666;
+  font-size: 0.9em;
+}
+
+
+@media (max-width: 768px) {
+  .user-details-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .user-image img {
+    width: 150px;
+    height: 150px;
+  }
+}

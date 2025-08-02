@@ -1,0 +1,14 @@
+<div class="search">
+  <app-search (searchHappen)="onSearchHappened($event)"></app-search>
+</div>
+<div class="users-list">
+  @for (user of filteredUsers$ | async; track user.id) {
+    <!-- property & event binding using async pipe -->
+  <app-card
+    [user]="user"
+    [isLast]="$last"
+    (removeCard)="onRemoveUser($event)"
+  >
+  </app-card>
+  }
+</div>
