@@ -1,0 +1,46 @@
+<div class="modal-overlay" (click)="onCancel()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2>{{ isEditMode() ? 'Edit User' : 'Add New User' }}</h2>
+      <button type="button" class="close-btn" (click)="onCancel()">&times;</button>
+    </div>
+    
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Username *</label>
+        <input 
+          type="text" 
+          id="username" 
+          formControlName="username"
+          class="form-control"
+          [class.error]="userForm.get('username')?.invalid && userForm.get('username')?.touched"
+        >
+        <div class="error-message" *ngIf="userForm.get('username')?.invalid && userForm.get('username')?.touched">
+          Username is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input 
+          type="email" 
+          id="email" 
+          formControlName="email"
+          class="form-control"
+          [class.error]="userForm.get('email')?.invalid && userForm.get('email')?.touched"
+        >
+        <div class="error-message" *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+          <span *ngIf="userForm.get('email')?.errors?.['required']">Email is required</span>
+          <span *ngIf="userForm.get('email')?.errors?.['email']">Please enter a valid email</span>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+        <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">
+          {{ isEditMode() ? 'Update' : 'Add' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

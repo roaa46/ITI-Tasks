@@ -1,0 +1,90 @@
+<div class="container">
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+
+  <div class="search-section">
+    <div class="search-bar">
+      <input 
+        type="text" 
+        placeholder="Search by username or email..." 
+        [value]="searchTerm()"
+        (input)="onSearchChange($any($event.target).value)"
+        class="search-input"
+      >
+    </div>
+    <button class="btn btn-primary add-btn" (click)="openAddUserForm()">
+      Add New User
+    </button>
+  </div>
+
+  <div class="users-section">
+    @if (filteredUsers().length === 0 && searchTerm() === '') {
+      <div class="no-users">
+        <h3>No users found</h3>
+        <p>Start by adding your first user!</p>
+      </div>
+    } @else if (filteredUsers().length === 0 && searchTerm() !== '') {
+      <div class="no-users">
+        <h3>No users match your search</h3>
+        <p>Try a different search term or add a new user.</p>
+      </div>
+    } @else {
+      <div class="users-table-container">
+        <table class="users-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (user of filteredUsers(); track user.id) {
+              <tr class="user-row">
+                <td class="user-id">{{ user.id }}</td>
+                <td class="username">{{ user.username }}</td>
+                <td class="email">{{ user.email }}</td>
+                <td class="actions">
+                  <button 
+                    class="btn btn-edit" 
+                    (click)="openEditUserForm(user)"
+                    title="Edit User"
+                  >
+                    Edit
+                  </button>
+                  <button 
+                    class="btn btn-delete" 
+                    (click)="openDeleteConfirmation(user)"
+                    title="Delete User"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  </div>
+
+  <!-- user form modal -->
+  @if (showUserForm()) {
+    <app-user-form
+      [user]="editingUser()"
+      (save)="onUserFormSave($event)"
+      (cancel)="onUserFormCancel()"
+    ></app-user-form>
+  }
+
+  <!-- delete confirmation modal -->
+  @if (showDeleteConfirmation()) {
+    <app-delete-confirmation
+      [user]="deletingUser()"
+      (confirm)="onDeleteConfirm()"
+      (cancel)="onDeleteCancel()"
+    ></app-delete-confirmation>
+  }
+</div>
